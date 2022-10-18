@@ -113,6 +113,7 @@ function changeRandomCheck(){
 
   if (randomCheckbox.checked) {
     inputPokemonId.disabled = true;
+    inputPokemonId.value = '';
     randomStatus = true;
     regionRadiobutton.forEach(i => {
       i.disabled = false;
