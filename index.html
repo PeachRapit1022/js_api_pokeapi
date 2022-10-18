@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモンタイプ当てゲーム！</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="setPokemonID.js"></script>
+    <script src="getPokemonInfo.js"></script>
+    <script src="checkPokemonType.js"></script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <p>
+        <p>
+            <input checked type="radio" class="btn-check region" name="region" id="All">
+            <label for="All" class="btn region">指定なし</label>
+
+            <input type="radio" class="btn-check region" name="region" id="Kanto">
+            <label for="Kanto" class="btn region">カントー地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Johto">
+            <label for="Johto" class="btn region">ジョウト地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Hoenn">
+            <label for="Hoenn" class="btn region">ホウエン地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Sinnoh">
+            <label for="Sinnoh" class="btn region">シンオウ地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Unova">
+            <label for="Unova" class="btn region">イッシュ地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Kalos">
+            <label for="Kalos" class="btn region">カロス地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Alola">
+            <label for="Alola" class="btn region">アローラ地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Galar">
+            <label for="Galar" class="btn region">ガラル地方</label>
+    
+            <input type="radio" class="btn-check region" name="region" id="Hisui">
+            <label for="Hisui" class="btn region">ヒスイ地方</label>
+        </p>
+
+        <div class="col-auto form-check form-switch ">
+            <input class="form-check-input" type="checkbox" id="selectRandomId" onchange="changeRandomCheck()" checked>
+            <label class="form-check-label" for="selectRandomId">ランダムモード</label>
+        </div>
+
+        <div class="row g-3 align-items-center">
+
+            <div class="col-auto">
+                <label for="inputPokemonId" class="col-form-label">ぜんこくずかん番号を入力する</label>
+            </div>
+
+            <div class="col-auto">
+                <input type="number" min="1" max="905" id="inputPokemonId" class="form-control" placeholder="No." aria-describedby="passwordHelpInline" disabled="true">
+            </div>
+
+        </div>
+        <button type="button" class="btn btn-primary" onclick="doGet()">Submit</button>
+    </p>
+
+    <div id="inputRegion"></div>
+
+    <img id="pokemonImg" src=""></img>
+    <div id="name"></div>
+    <div id="typeNumber"></div>
+    <div id="type"></div>
+
+    <p>
+        <input type="checkbox" class="btn-check" name="type" id="normal">
+        <label for="normal" class="btn type-normal">normal/ノーマル</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="fighting">
+        <label for="fighting" class="btn type-fighting">fighting/かくとう</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="flying">
+        <label for="flying" class="btn type-flying">flying/ひこう</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="poison">
+        <label for="poison" class="btn type-poison">poison/どく</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="ground">
+        <label for="ground" class="btn type-ground">ground/じめん</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="rock">
+        <label for="rock" class="btn type-rock">rock/いわ</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="bug">
+        <label for="bug" class="btn type-bug">bug/むし</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="ghost">
+        <label for="ghost" class="btn type-ghost">ghost/ゴースト</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="steel">
+        <label for="steel" class="btn type-steel">steel/はがね</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="fire">
+        <label for="fire" class="btn type-fire">fire/ほのお</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="water">
+        <label for="water" class="btn type-water">water/みず</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="grass">
+        <label for="grass" class="btn type-grass">grass/くさ</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="electric">
+        <label for="electric" class="btn type-electric">electric/でんき</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="psychic">
+        <label for="psychic" class="btn type-psychic">psychic/エスパー</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="ice">
+        <label for="ice" class="btn type-ice">ice/こおり</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="dragon">
+        <label for="dragon" class="btn type-dragon">dragon/ドラゴン</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="dark">
+        <label for="dark" class="btn type-dark">dark/あく</label>
+
+        <input type="checkbox" class="btn-check" name="type" id="fairy">
+        <label for="fairy" class="btn type-fairy">fairy/フェアリー</label>
+    </p>
+
+    <button type="button" class="btn btn-secondary" onclick="getInputType()">GO!</button>
+
+    <div id="inputType"></div>
+    <div id="point"></div>
+</body>
+</html>

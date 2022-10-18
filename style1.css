@@ -1,0 +1,231 @@
+html {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#inputPokemonId {
+    width: 8em;
+}
+
+.btn {
+    color: #fff;
+    border-color: #007bff;
+    border: none;
+    outline: none;
+    margin: .2em;
+    width: 150px;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/*地方選択*/
+.region {
+    background-color: #7E878F;
+}
+.region:checked+.btn{
+    color: #7E878F;
+    background-color: #fff;
+    outline: #7E878F solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*ノーマル*/
+.type-normal {
+    background-color: #7E878F;
+}
+#normal:checked+.btn{
+    color: #7E878F;
+    background-color: #fff;
+    outline: #7E878F solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*かくとう*/
+.type-fighting {
+    background-color: #C02957;
+}
+#fighting:checked+.btn{
+    color: #C02957;
+    background-color: #fff;
+    outline: #C02957 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*ひこう*/
+.type-flying {
+    background-color: #7D95D5;
+}
+#flying:checked+.btn{
+    color: #7D95D5;
+    background-color: #fff;
+    outline: #7D95D5 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*どく*/
+.type-poison {
+    background-color: #9950BC;
+}
+#poison:checked+.btn{
+    color: #9950BC;
+    background-color: #fff;
+    outline: #9950BC solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*じめん*/
+.type-ground {
+    background-color: #CE6236;
+}
+#ground:checked+.btn{
+    color: #CE6236;
+    background-color: #fff;
+    outline: #CE6236 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*いわ*/
+.type-rock {
+    background-color: #BAAA78;
+}
+#rock:checked+.btn{
+    color: #BAAA78;
+    background-color: #fff;
+    outline: #BAAA78 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*むし*/
+.type-bug {
+    background-color: #7FB822;
+}
+#bug:checked+.btn{
+    color: #7FB822;
+    background-color: #fff;
+    outline: #7FB822 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*ゴースト*/
+.type-ghost {
+    background-color: #41539C;
+}
+#ghost:checked+.btn{
+    color: #41539C;
+    background-color: #fff;
+    outline: #41539C solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*はがね*/
+.type-steel {
+    background-color: #4A7C90;
+}
+#steel:checked+.btn{
+    color: #4A7C90;
+    background-color: #fff;
+    outline: #4A7C90 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*ほのお*/
+.type-fire {
+    background-color: #FC8A43;
+}
+#fire:checked+.btn{
+    color: #FC8A43;
+    background-color: #fff;
+    outline: #FC8A43 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*みず*/
+.type-water {
+    background-color: #3E7BCA;
+}
+#water:checked+.btn{
+    color: #3E7BCA;
+    background-color: #fff;
+    outline: #3E7BCA solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*くさ*/
+.type-grass {
+    background-color: #54B149;
+}
+#grass:checked+.btn{
+    color: #54B149;
+    background-color: #fff;
+    outline: #54B149 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*でんき*/
+.type-electric {
+    background-color: #F0CA2E;
+}
+#electric:checked+.btn{
+    color: #F0CA2E;
+    background-color: #fff;
+    outline: #F0CA2E solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*エスパー*/
+.type-psychic {
+    background-color: #F45964;
+}
+#psychic:checked+.btn{
+    color: #F45964;
+    background-color: #fff;
+    outline: #F45964 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*こおり*/
+.type-ice {
+    background-color: #64C5B2;
+}
+#ice:checked+.btn{
+    color: #64C5B2;
+    background-color: #fff;
+    outline: #64C5B2 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*ドラゴン*/
+.type-dragon {
+    background-color: #0F56B7;
+}
+#dragon:checked+.btn{
+    color: #0F56B7;
+    background-color: #fff;
+    outline: #0F56B7 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*あく*/
+.type-dark {
+    background-color: #484053;
+}
+#dark:checked+.btn{
+    color: #484053;
+    background-color: #fff;
+    outline: #484053 solid .2em;
+    outline-offset : -0.2em;
+}
+
+/*フェアリー*/
+.type-fairy {
+    background-color: #E574E0;
+}
+#fairy:checked+.btn{
+    color: #E574E0;
+    background-color: #fff;
+    outline: #E574E0 solid .2em;
+    outline-offset : -0.2em;
+}

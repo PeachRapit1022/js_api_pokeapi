@@ -1,0 +1,222 @@
+.btn {
+    color: #fff;
+    border-color: #007bff;
+    border: none;
+    outline: none;
+}
+
+/*ノーマル*/
+.type-normal {
+    background-color: #A8A878;
+}
+.type-normal:hover {
+    color: #fff;
+    background-color: #C6C6A7;
+}
+#normal:checked+.btn{
+    background-color: #6D6D4E;
+}
+
+/*かくとう*/
+.type-fighting {
+    background-color: #C03028;
+}
+.type-fighting:hover {
+    color: #fff;
+    background-color: #D67873;
+}
+#fighting:checked+.btn{
+    background-color: #7D1F1A;
+}
+
+/*ひこう*/
+.type-flying {
+    background-color: #A890F0;
+}
+.type-flying:hover {
+    color: #fff;
+    background-color: #C6B7F5;
+}
+#flying:checked+.btn{
+    background-color: #6D5E9C;
+}
+
+/*どく*/
+.type-poison {
+    background-color: #A040A0;
+}
+.type-poison:hover {
+    color: #fff;
+    background-color: #C183C1;
+}
+#poison:checked+.btn{
+    background-color: #682A68;
+}
+
+/*じめん*/
+.type-ground {
+    background-color: #E0C068;
+}
+.type-ground:hover {
+    color: #fff;
+    background-color: #EBD69D;
+}
+#ground:checked+.btn{
+    background-color: #927D44;
+}
+
+/*いわ*/
+.type-rock {
+    background-color: #B8A038;
+}
+.type-rock:hover {
+    color: #fff;
+    background-color: #D1C17D;
+}
+#rock:checked+.btn{
+    background-color: #786824;
+}
+
+/*むし*/
+.type-bug {
+    background-color: #A8B820;
+}
+.type-bug:hover {
+    color: #fff;
+    background-color: #C6D16E;
+}
+#bug:checked+.btn{
+    background-color: #6D7815;
+}
+
+/*ゴースト*/
+.type-ghost {
+    background-color: #705898;
+}
+.type-ghost:hover {
+    color: #fff;
+    background-color: #A292BC;
+}
+#ghost:checked+.btn{
+    background-color: #493963;
+}
+
+/*はがね*/
+.type-steel {
+    background-color: #B8B8D0;
+}
+.type-steel:hover {
+    color: #fff;
+    background-color: #D1D1E0;
+}
+#steel:checked+.btn{
+    background-color: #787887;
+}
+
+/*ほのお*/
+.type-fire {
+    background-color: #F08030;
+}
+.type-fire:hover {
+    color: #fff;
+    background-color: #F5AC78;
+}
+#fire:checked+.btn{
+    background-color: #9C531F;
+}
+
+/*みず*/
+.type-water {
+    background-color: #6890F0;
+}
+.type-water:hover {
+    color: #fff;
+    background-color: #9DB7F5;
+}
+#water:checked+.btn{
+    background-color: #445E9C;
+}
+
+/*くさ*/
+.type-grass {
+    background-color: #78C850;
+}
+.type-grass:hover {
+    color: #fff;
+    background-color: #A7DB8D;
+}
+#grass:checked+.btn{
+    background-color: #4E8234;
+}
+
+/*でんき*/
+.type-electric {
+    background-color: #F8D030;
+}
+.type-electric:hover {
+    color: #fff;
+    background-color: #FAE078;
+}
+#electric:checked+.btn{
+    background-color: #A1871F;
+}
+
+/*エスパー*/
+.type-psychic {
+    background-color: #F85888;
+}
+.type-psychic:hover {
+    color: #fff;
+    background-color: #FA92B2;
+}
+#psychic:checked+.btn{
+    background-color: #A13959;
+}
+
+/*こおり*/
+.type-ice {
+    background-color: #98D8D8;
+}
+.type-ice:hover {
+    color: #fff;
+    background-color: #BCE6E6;
+}
+#ice:checked+.btn{
+    background-color: #638D8D;
+}
+
+/*ドラゴン*/
+.type-dragon {
+    background-color: #7038F8;
+}
+.type-dragon:hover {
+    color: #fff;
+    background-color: #A27DFA;
+}
+#dragon:checked+.btn{
+    background-color: #4924A1;
+}
+
+/*あく*/
+.type-dark {
+    background-color: #705848;
+}
+.type-dark:hover {
+    color: #fff;
+    background-color: #A29288;
+}
+#dark:checked+.btn{
+    background-color: #49392F;
+}
+
+/*フェアリー*/
+.type-fairy {
+    background-color: #EE99AC;
+}
+.type-fairy:hover {
+    color: #fff;
+    background-color: #F4BDC9;
+}
+#fairy:checked+.btn{
+    background-color: #9B6470;
+}
