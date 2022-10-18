@@ -9,10 +9,11 @@ window.addEventListener('load', function() {
 リロード時に実行する関数
 */
 function doGet() {
+  trueType = []
   //全国図鑑番号
   const pokemonId = setPokemonId();
-  getPokemonNameJa(pokemonId);
   getPokemonInfo(pokemonId);
+  getPokemonNameJa(pokemonId);
 }
 
 /*
@@ -23,7 +24,7 @@ function setPokemonId() {
   let pokemonId;
 
   //地域指定を取得
-  region = getInputRegion();
+  let inputRegion = getInputRegion();
 
   //ランダム指定を取得
   let randomCheckbox = document.getElementById('selectRandomId');
@@ -31,34 +32,34 @@ function setPokemonId() {
   if (randomCheckbox.checked) {
 
     //ランダムの場合、地域指定を考慮してIDを生成
-    if (region === 'All') {
+    if (inputRegion === 'All') {
       min = 1;
       max = 905;
-    }else if (region === 'Kanto') {
+    }else if (inputRegion === 'Kanto') {
       min = 1;
       max = 151;
-    } else if (region === 'Johto') {
+    } else if (inputRegion === 'Johto') {
       min = 152;
       max = 251;
-    } else if (region === 'Hoenn') {
+    } else if (inputRegion === 'Hoenn') {
       min = 252;
       max = 386;
-    } else if (region === 'Sinnoh') {
+    } else if (inputRegion === 'Sinnoh') {
       min = 387;
       max = 493;
-    } else if (region === 'Unova') {
+    } else if (inputRegion === 'Unova') {
       min = 494;
       max = 649;
-    } else if (region === 'Kalos') {
+    } else if (inputRegion === 'Kalos') {
       min = 650;
       max = 721;
-    } else if (region === 'Alola') {
+    } else if (inputRegion === 'Alola') {
       min = 722;
       max = 807;
-    } else if (region === 'Galar') {
+    } else if (inputRegion === 'Galar') {
       min = 810;
       max = 898;
-    } else if (region === 'Hisui') {
+    } else if (inputRegion === 'Hisui') {
       min = 899;
       max = 905;
     } else {
