@@ -8,6 +8,19 @@ html {
     width: 8em;
 }
 
+.container {
+    display: flex;
+}
+
+.flexInfo {
+    flex-basis: 50%;
+}
+
+#pokemonImg{
+    max-width: 100%;
+    height: auto;
+}
+
 .btn {
     color: #fff;
     border-color: #007bff;

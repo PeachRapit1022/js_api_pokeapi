@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <p>
+    <div>
         <p>
             <input checked type="radio" class="btn-check region" name="region" id="All">
             <label for="All" class="btn region">指定なし</label>
@@ -63,14 +63,18 @@
 
         </div>
         <button type="button" class="btn btn-primary" onclick="doGet()">Submit</button>
-    </p>
+    </div>
 
-    <div id="inputRegion"></div>
-
-    <img id="pokemonImg" src=""></img>
-    <div id="name"></div>
-    <div id="typeNumber"></div>
-    <div id="type"></div>
+    <div class="container">
+        <div class="flexInfo">
+            <div id="name"></div>
+            <div id="typeNumber"></div>
+            <div id="type"></div>    
+        </div>
+        <div>
+            <img id="pokemonImg" src=""></img>
+        </div>
+    </div>
 
     <p>
         <input type="checkbox" class="btn-check" name="type" id="normal">
