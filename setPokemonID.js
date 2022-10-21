@@ -27,7 +27,8 @@ function setPokemonId() {
   let inputRegion = getInputRegion();
 
   //ランダム指定を取得
-  let randomCheckbox = document.getElementById('selectRandomId');
+  let randomCheckbox = document.getElementById('selectRandomMode');
+  let eeveeCheckbox = document.getElementById('selecEeveeMode');
 
   if (randomCheckbox.checked) {
 
@@ -35,7 +36,7 @@ function setPokemonId() {
     if (inputRegion === 'All') {
       min = 1;
       max = 905;
-    }else if (inputRegion === 'Kanto') {
+    } else if (inputRegion === 'Kanto') {
       min = 1;
       max = 151;
     } else if (inputRegion === 'Johto') {
@@ -69,9 +70,15 @@ function setPokemonId() {
 
     pokemonId = getRandomIntInclusive(min, max);
     
+  } else if(eeveeCheckbox.checked) {
+    const eevee = [133, 134, 135, 136, 196, 197, 470, 471, 700]
+    pokemonId = eevee[Math.floor(Math.random() * eevee.length)];
   } else {
     //ランダムでない場合は入力された指定IDを取得
-    pokemonId = document.getElementById('inputPokemonId').value;
+    const inputId = document.getElementById('inputPokemonId');
+    pokemonId = inputId.value;
+    //入力欄をクリア
+    inputId.value = '';
   }
 
   //決定されたIDを返却
@@ -104,24 +111,59 @@ function getInputRegion() {
 }
 
 /*
-ランダムチェックの状態に合わせて指定ID入力欄、エリア指定ボタンをグレーアウト
+ランダムモードの状態に合わせて指定ID入力欄、エリア指定ボタンをグレーアウト
 */
-function changeRandomCheck(){
-  let randomCheckbox = document.getElementById('selectRandomId');
+function changeRandomMode(){
+  let randomCheckbox = document.getElementById('selectRandomMode');
+  let eeveeCheckbox = document.getElementById('selecEeveeMode');
   let regionRadiobutton = document.getElementsByName('region');
   let inputPokemonId = document.getElementById("inputPokemonId");
   let randomStatus = true;
+  let eeveeStatus = true;
 
   if (randomCheckbox.checked) {
+    eeveeCheckbox.checked = false;
     inputPokemonId.disabled = true;
     inputPokemonId.value = '';
     randomStatus = true;
+    eeveeStatus = false;
     regionRadiobutton.forEach(i => {
       i.disabled = false;
     });
 
   } else {
     inputPokemonId.disabled = false;
+    randomStatus = false;
+    eeveeStatus = false;
+    regionRadiobutton.forEach(i => {
+      i.disabled = true;
+    });
+  }
+}
+
+/*
+イーブイモードの状態に合わせて指定ID入力欄、エリア指定ボタンをグレーアウト
+*/
+function changeEeveeMode(){
+  let randomCheckbox = document.getElementById('selectRandomMode');
+  let eeveeCheckbox = document.getElementById('selecEeveeMode');
+  let regionRadiobutton = document.getElementsByName('region');
+  let inputPokemonId = document.getElementById("inputPokemonId");
+  let randomStatus = true;
+
+  if (eeveeCheckbox.checked) {
+    randomCheckbox.checked = false;
+    inputPokemonId.disabled = true;
+    inputPokemonId.value = '';
+    eeveeStatus = true;
+    randomStatus = false;
+    regionRadiobutton.forEach(i => {
+      i.disabled = true;
+    });
+
+  } else {
+    inputPokemonId.disabled = false;
+    eeveeStatus = false;
     randomStatus = false;
     regionRadiobutton.forEach(i => {
       i.disabled = true;

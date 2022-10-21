@@ -47,8 +47,12 @@
         </p>
 
         <div class="col-auto form-check form-switch ">
-            <input class="form-check-input" type="checkbox" id="selectRandomId" onchange="changeRandomCheck()" checked>
-            <label class="form-check-label" for="selectRandomId">ランダムモード</label>
+            <input class="form-check-input" type="checkbox" id="selectRandomMode" onchange="changeRandomMode()" checked>
+            <label class="form-check-label" for="selectRandomMode">ランダムモード</label>
+        </div>
+        <div class="col-auto form-check form-switch ">
+            <input class="form-check-input" type="checkbox" id="selecEeveeMode" onchange="changeEeveeMode()">
+            <label class="form-check-label" for="selecEeveeMode">イーブイモード</label>
         </div>
 
         <div class="row g-3 align-items-center">
@@ -62,7 +66,7 @@
             </div>
 
         </div>
-        <button type="button" class="btn btn-primary" onclick="doGet()">Submit</button>
+        <button type="button" class="btn btn-primary" onclick="doGet()">つぎのポケモン</button>
     </div>
 
     <div class="container">
@@ -135,7 +139,8 @@
         <label for="fairy" class="btn type-fairy">fairy/フェアリー</label>
     </p>
 
-    <button type="button" class="btn btn-secondary" onclick="getInputType()">GO!</button>
+    <button type="button" class="btn btn-secondary" onclick="getInputType()">こたえあわせ</button>
+    <button type="button" class="btn btn-primary" onclick="doGet()">つぎのポケモン</button>
 
     <div id="inputType"></div>
     <div id="point"></div>
