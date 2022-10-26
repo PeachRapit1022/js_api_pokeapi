@@ -45,15 +45,20 @@
             <input type="radio" class="btn-check region" name="region" id="Hisui">
             <label for="Hisui" class="btn region">ヒスイ地方</label>
         </p>
-
-        <div class="col-auto form-check form-switch ">
-            <input class="form-check-input" type="checkbox" id="selectRandomMode" onchange="changeRandomMode()" checked>
-            <label class="form-check-label" for="selectRandomMode">ランダムモード</label>
-        </div>
-        <div class="col-auto form-check form-switch ">
-            <input class="form-check-input" type="checkbox" id="selecEeveeMode" onchange="changeEeveeMode()">
-            <label class="form-check-label" for="selecEeveeMode">イーブイモード</label>
-        </div>
+        <form id="inputMode">
+            <div class="col-auto form-check form-switch ">
+                <input class="form-check-input" name="inputMode" type="radio" value="random" id="selectRandomMode" onchange="changeInputMode()" checked>
+                <label class="form-check-label" for="selectRandomMode">ランダムモード</label>
+            </div>
+            <div class="col-auto form-check form-switch ">
+                <input class="form-check-input" name="inputMode" type="radio" value="eevee" id="selecEeveeMode" onchange="changeInputMode()">
+                <label class="form-check-label" for="selecEeveeMode">イーブイモード</label>
+            </div>
+            <div class="col-auto form-check form-switch ">
+                <input class="form-check-input" name="inputMode" type="radio" value="manual" id="selectManualMode" onchange="changeInputMode()">
+                <label class="form-check-label" for="selectManualMode">手動入力</label>
+            </div>
+        </form>
 
         <div class="row g-3 align-items-center">
 

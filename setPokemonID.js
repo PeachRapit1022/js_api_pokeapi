@@ -117,60 +117,31 @@ function getInputRegion() {
 }
 
 /*
-ランダムモードの状態に合わせて指定ID入力欄、エリア指定ボタンをグレーアウト
+入力モード選択
 */
-function changeRandomMode(){
-  let randomCheckbox = document.getElementById('selectRandomMode');
-  let eeveeCheckbox = document.getElementById('selecEeveeMode');
-  let regionRadiobutton = document.getElementsByName('region');
-  let inputPokemonId = document.getElementById("inputPokemonId");
-  let randomStatus = true;
-  let eeveeStatus = true;
+function changeInputMode(){
+  const regionRadiobutton = document.getElementsByName('region');
+  const inputPokemonId = document.getElementById("inputPokemonId");
+  const inputMode = document.getElementById('inputMode').elements['inputMode'].value;
 
-  if (randomCheckbox.checked) {
-    eeveeCheckbox.checked = false;
+  console.log(inputMode);
+
+  if (inputMode === 'random') {
     inputPokemonId.disabled = true;
     inputPokemonId.value = '';
-    randomStatus = true;
-    eeveeStatus = false;
     regionRadiobutton.forEach(i => {
       i.disabled = false;
     });
 
-  } else {
-    inputPokemonId.disabled = false;
-    randomStatus = false;
-    eeveeStatus = false;
-    regionRadiobutton.forEach(i => {
-      i.disabled = true;
-    });
-  }
-}
-
-/*
-イーブイモードの状態に合わせて指定ID入力欄、エリア指定ボタンをグレーアウト
-*/
-function changeEeveeMode(){
-  let randomCheckbox = document.getElementById('selectRandomMode');
-  let eeveeCheckbox = document.getElementById('selecEeveeMode');
-  let regionRadiobutton = document.getElementsByName('region');
-  let inputPokemonId = document.getElementById("inputPokemonId");
-  let randomStatus = true;
-
-  if (eeveeCheckbox.checked) {
-    randomCheckbox.checked = false;
+  } else if (inputMode === 'eevee') {
     inputPokemonId.disabled = true;
     inputPokemonId.value = '';
-    eeveeStatus = true;
-    randomStatus = false;
     regionRadiobutton.forEach(i => {
       i.disabled = true;
     });
-
-  } else {
+  } else if (inputMode === 'manual') {
     inputPokemonId.disabled = false;
-    eeveeStatus = false;
-    randomStatus = false;
+    inputPokemonId.value = '';
     regionRadiobutton.forEach(i => {
       i.disabled = true;
     });
