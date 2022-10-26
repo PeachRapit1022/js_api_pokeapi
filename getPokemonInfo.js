@@ -65,7 +65,7 @@ function getPokemonNameJa(id) {
     } else if (gen === 'generation-vii') {
       region = 'アローラ地方'
     } else if (gen === 'generation-viii') {
-      region = 'ガラル地方'
+      region = 'ガラル地方/ヒスイ地方'
     } else if (gen === 'generation-iv') {
       region = 'パルデア地方'
     } else {

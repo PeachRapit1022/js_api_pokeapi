@@ -1,5 +1,6 @@
 //pokeAPIから取得したタイプを保存するグローバル変数
 let trueType = [];
+let pastPokemonId = 0;
 
 window.addEventListener('load', function() {
   doGet();
@@ -11,9 +12,14 @@ window.addEventListener('load', function() {
 function doGet() {
   trueType = []
   //全国図鑑番号
-  const pokemonId = setPokemonId();
+  let pokemonId = setPokemonId();
+  if (pokemonId == pastPokemonId) {
+    console.log('重複再試行')
+    pokemonId = setPokemonId();
+  }
   getPokemonInfo(pokemonId);
   getPokemonNameJa(pokemonId);
+  pastPokemonId = pokemonId;
 }
 
 /*
