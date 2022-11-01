@@ -13,6 +13,14 @@ window.addEventListener('load', function() {
 function doGet() {
   trueType = []
 
+  //タイプ選択ボタン初期化
+  const typeList = document.getElementsByName('type');  
+  for (let i = 0; i < typeList.length; i++) {
+    if (typeList[i].checked) {
+      typeList[i].checked = false;
+    }
+  }
+
   //ID選択モードを取得
   const inputMode = document.getElementById('inputMode').elements['inputMode'].value;
 
