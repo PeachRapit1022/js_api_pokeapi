@@ -21,6 +21,11 @@ function doGet() {
     }
   }
 
+  //メッセージ初期化
+  document.getElementById('point').innerHTML = ''
+  document.getElementById('result').innerHTML = ''
+
+
   //ID選択モードを取得
   const inputMode = document.getElementById('inputMode').elements['inputMode'].value;
 

@@ -12,7 +12,7 @@ function getInputType() {
       }
     }
   
-    document.getElementById("inputType").innerHTML = inputType;
+    //document.getElementById("inputType").innerHTML = inputType;
   
     judgeType(trueType, inputType);
   }
@@ -28,8 +28,10 @@ function judgeType(type, inputType){
     if (type.length===1 && inputType.length===1) {
         if (type[0] === inputType[0]) {
         point = 5
+        message = 'せいかい！'
         } else {
         point = 0
+        message = 'ざんねん...'
         }
     }
 
@@ -37,8 +39,10 @@ function judgeType(type, inputType){
     if (type.length===1 && inputType.length===2) {
         if (type[0] === inputType[0] || type[0] === inputType[1]) {
         point = 3
+        message = 'おしい！'
         } else {
         point = 0
+        message = 'ざんねん...'
         }
     }
 
@@ -46,8 +50,10 @@ function judgeType(type, inputType){
     if (type.length===2 && inputType.length===1) {
         if (type[0] === inputType[0] || type[1] === inputType[0]) {
         point = 2
+        message = 'おしい！'
         } else {
         point = 0
+        message = 'ざんねん...'
         }
     }
 
@@ -55,15 +61,22 @@ function judgeType(type, inputType){
     if (type.length===2 && inputType.length===2) {
         if (type[0] === inputType[0] && type[1] === inputType[1]) {
         point = 5
+        message = 'せいかい！'
         } else if (type[0] === inputType[1] && type[1] === inputType[0]) {
         point = 5
+        message = 'せいかい！'
         } else if (type[0] === inputType[0] || type[0] === inputType[1] || type[1] === inputType[0] || type[1] === inputType[1]) {
         point = 3
+        message = 'おしい！'
         } else {
         point = 0
+        message = 'ざんねん...'
         }
     }
+
+    
     console.log(point+'point')
-    document.getElementById('point')
-    .innerHTML = point+'point'
+    document.getElementById('point').innerHTML = point+'point'
+    document.getElementById('result').innerHTML = message
+
 }
